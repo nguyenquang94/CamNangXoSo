@@ -11,6 +11,7 @@ import { AdMobBanner } from 'react-native-admob';
 import renderIf from '../components/renderif';
 import moment from 'moment';
 import { openHUD, closeHUD } from '../actions/hud';
+import { openSideMenu } from '../actions/sidemenu';
 
 class ThongKeScreen extends Component {
 	constructor(props) {
@@ -29,8 +30,8 @@ class ThongKeScreen extends Component {
 			    <Container>
 			        <Header hasTabs style={{backgroundColor: '#FD9727'}}>
 			            <Left style={{flex: 1}}>
-			                <Button transparent onPress={() => dispatch(goBack())}>
-								<Icon name='md-arrow-back' />
+							<Button transparent onPress={() => dispatch(openSideMenu())}>
+								<Icon name='menu' />
 							</Button>
 			            </Left>
 			            <Body style={{flex: 3, alignItems: 'center', alignSelf: 'center'}}>
@@ -95,7 +96,7 @@ class ThongKeScreen extends Component {
 				        </List>
 			        </Content>
 			        <AdMobBanner
-                        bannerSize="banner"
+                        bannerSize="smartBannerPortrait"
                         adUnitID="ca-app-pub-7350182379499361/8563659309"
                         testDeviceID="EMULATOR"
                         didFailToReceiveAdWithError={this.bannerError}/>

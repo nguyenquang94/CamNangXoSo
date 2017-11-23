@@ -104,7 +104,7 @@ class ThongKeDetailScreen extends Component {
 			        	</List>
 			        </Content>
 			        <AdMobBanner
-                        bannerSize="banner"
+                        bannerSize="smartBannerPortrait"
                         adUnitID="ca-app-pub-7350182379499361/8563659309"
                         testDeviceID="EMULATOR"
                         didFailToReceiveAdWithError={this.bannerError}/>
@@ -117,13 +117,13 @@ class ThongKeDetailScreen extends Component {
 		var renderContent = [];
 			renderContent.push(
 				<View style={{height: 50, flexDirection: 'row', borderWidth: 0.5, borderColor: 'black', flex: 1}}>
-					<View style={{flex: 0.2, justifyContent: 'center'}}>
+					<View style={{flex: 0.2, justifyContent: 'center',backgroundColor: 'white'}}>
 						<Text style={{color: 'red', fontWeight: 'bold', alignSelf: 'center'}}>Đầu số</Text>
 					</View>
-					<View style={{flex: 0.4 , borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center'}}>
+					<View style={{flex: 0.4 , borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center',backgroundColor: 'white'}}>
 						<Text style={{color: 'red', fontWeight: 'bold', alignSelf: 'center'}}>Số lần</Text>
 					</View>
-					<View style={{flex: 0.4 , borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center'}}>
+					<View style={{flex: 0.4 , borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center',backgroundColor: 'white'}}>
 						<Text style={{color: 'red', fontWeight: 'bold', alignSelf: 'center'}}>Tỉ Lệ (%)</Text>
 					</View>	
 				</View>
@@ -133,13 +133,13 @@ class ThongKeDetailScreen extends Component {
 				this.state.data.map((items) => {
 					renderContent.push(
 						<View style={{height: 40, flexDirection: 'row', borderWidth: 0.5, borderColor: 'black', flex: 1}}>
-							<View style={{flex: 0.2, justifyContent: 'center'}}>
+							<View style={{flex: 0.2, justifyContent: 'center',backgroundColor: 'white'}}>
 								<Text style={{ alignSelf: 'center'}}>{items.dau_so}</Text>
 							</View>
-							<View style={{flex: 0.4, borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center'}}>
+							<View style={{flex: 0.4, borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center',backgroundColor: 'white'}}>
 								<Text style={{ alignSelf: 'center'}}>{items.sl}</Text>
 							</View>
-							<View style={{flex: 0.4, borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center'}}>
+							<View style={{flex: 0.4, borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center',backgroundColor: 'white'}}>
 								<Text style={{ alignSelf: 'center'}}>{items.percent}</Text>
 							</View>	
 						</View>
@@ -149,13 +149,13 @@ class ThongKeDetailScreen extends Component {
 				this.state.data.map((items) => {
 					renderContent.push(
 						<View style={{height: 40, flexDirection: 'row', borderWidth: 0.5, borderColor: 'black', flex: 1}}>
-							<View style={{flex: 0.2, justifyContent: 'center'}}>
+							<View style={{flex: 0.2, justifyContent: 'center',backgroundColor: 'white'}}>
 								<Text style={{ alignSelf: 'center'}}>{items.dit_so}</Text>
 							</View>
-							<View style={{flex: 0.4, borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center'}}>
+							<View style={{flex: 0.4, borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center',backgroundColor: 'white'}}>
 								<Text style={{ alignSelf: 'center'}}>{items.sl}</Text>
 							</View>
-							<View style={{flex: 0.4, borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center'}}>
+							<View style={{flex: 0.4, borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center',backgroundColor: 'white'}}>
 								<Text style={{ alignSelf: 'center'}}>{items.percent}</Text>
 							</View>	
 						</View>
@@ -165,13 +165,13 @@ class ThongKeDetailScreen extends Component {
 				this.state.data.map((items) => {
 					renderContent.push(
 						<View style={{height: 40, flexDirection: 'row', borderWidth: 0.5, borderColor: 'black', flex: 1}}>
-							<View style={{flex: 0.2, justifyContent: 'center'}}>
+							<View style={{flex: 0.2, justifyContent: 'center',backgroundColor: 'white'}}>
 								<Text style={{ alignSelf: 'center'}}>{items.boso}</Text>
 							</View>
-							<View style={{flex: 0.4, borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center'}}>
+							<View style={{flex: 0.4, borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center',backgroundColor: 'white'}}>
 								<Text style={{ alignSelf: 'center'}}>{items.sl}</Text>
 							</View>
-							<View style={{flex: 0.4, borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center'}}>
+							<View style={{flex: 0.4, borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center',backgroundColor: 'white'}}>
 								<Text style={{ alignSelf: 'center'}}>{items.percent}</Text>
 							</View>	
 						</View>

@@ -47,26 +47,6 @@ export function nav(state = tempNavState, action)
 				NavigationActions.back(),
 				state
 			);
-		case GO_TO_KQXS_SCREEN:
-			return MainNavigator.router.getStateForAction(
-				NavigationActions.navigate({ routeName: "KQXS" }),
-				state
-			);
-		case GO_TO_KQ_645:
-			return MainNavigator.router.getStateForAction(
-				NavigationActions.navigate({ routeName: "KQ645" }),
-				state
-			);
-		case GO_TO_THONGKE_SCREEN:
-			return MainNavigator.router.getStateForAction(
-				NavigationActions.navigate({ routeName: "ThongKe" }),
-				state
-			);
-		case GO_TO_KQ_MAX4D_SCREEN:
-			return MainNavigator.router.getStateForAction(
-				NavigationActions.navigate({ routeName: "KQMax4D" }),
-				state
-			);
 		case GO_TO_THONGKE_DETAIL_SCREEN:
 			return MainNavigator.router.getStateForAction(
 				NavigationActions.navigate({ routeName: "ThongKeDetail" , params: {type: action.typeGo}}),
@@ -87,6 +67,12 @@ export function rootScreen(state = "dashboard", action) {
 			return "dudoan";
 		case SWITCH_TO_TINH_THANH:
 			return "tinhthanh";
+		case GO_TO_KQ_645:
+			return "645";
+		case GO_TO_THONGKE_SCREEN:
+			return "thongke";
+		case GO_TO_KQ_MAX4D_SCREEN:
+			return "max4d";
 		default:
 			return state;
 	}

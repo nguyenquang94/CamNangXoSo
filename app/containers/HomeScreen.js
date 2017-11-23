@@ -104,7 +104,7 @@ class HomeScreen extends Component {
 		var g5 = [];
 		var g6 = [];
 		var g7 = [];
-		var date = data.ngay_quay;
+		var date = data1.ngay_quay;
 		db.push(data1.giai_dacbiet);
 		db.push(data2.giai_dacbiet);
 		arrData.push(db);
@@ -129,6 +129,7 @@ class HomeScreen extends Component {
 		g7.push(data1.giai_bay);
 		g7.push(data2.giai_bay);
 		arrData.push(g7);
+		arrData.push(date);
 		this.state.tableDataMT = arrData;
 		this.setState(this.state);
 	}
@@ -137,7 +138,6 @@ class HomeScreen extends Component {
 		var data1 = data[0];
 		var data2 = data[1];
 		var data3 = data[2];
-		var data4 = data[3];
 		var arrData = [];
 		var db = [];
 		var g1 = [];
@@ -147,46 +147,38 @@ class HomeScreen extends Component {
 		var g5 = [];
 		var g6 = [];
 		var g7 = [];
-		var date = data.ngay_quay;
+		var date = data1.ngay_quay;
 		db.push(data1.giai_dacbiet);
 		db.push(data2.giai_dacbiet);
 		db.push(data3.giai_dacbiet);
-		db.push(data4.giai_dacbiet);
 		arrData.push(db);
 		g1.push(data1.giai_nhat);
 		g1.push(data2.giai_nhat);
 		g1.push(data3.giai_nhat);
-		g1.push(data4.giai_nhat);
 		arrData.push(g1);
 		g2.push(data1.giai_nhi);
 		g2.push(data2.giai_nhi);
 		g2.push(data3.giai_nhi);
-		g2.push(data4.giai_nhi);
 		arrData.push(g2);
 		g3.push(data1.giai_ba);
 		g3.push(data2.giai_ba);
 		g3.push(data3.giai_ba);
-		g3.push(data4.giai_ba);
 		arrData.push(g3);
 		g4.push(data1.giai_tu);
 		g4.push(data2.giai_tu);
 		g4.push(data3.giai_tu);
-		g4.push(data4.giai_tu);
 		arrData.push(g4);
 		g5.push(data1.giai_nam);
 		g5.push(data2.giai_nam);
 		g5.push(data3.giai_nam);
-		g5.push(data4.giai_nam);
 		arrData.push(g5);
 		g6.push(data1.giai_sau);
 		g6.push(data2.giai_sau);
 		g6.push(data3.giai_sau);
-		g6.push(data4.giai_sau);
 		arrData.push(g6);
 		g7.push(data1.giai_bay);
 		g7.push(data2.giai_bay);
 		g7.push(data3.giai_bay);
-		g7.push(data4.giai_bay);
 		arrData.push(g7);
 		arrData.push(date);
 		this.state.tableDataMN = arrData;
@@ -245,7 +237,7 @@ class HomeScreen extends Component {
 			                </Button>
 			            </Left>
 			            <Body style={{flex: 3, alignItems: 'center', alignSelf: 'center'}}>
-			                <Title>Cẩm nang xổ số</Title>
+			                <Title>Xổ Số Truyền Thống</Title>
 			            </Body>
 			            <Right style={{flex: 1}}></Right>
 			        </Header>
@@ -279,21 +271,21 @@ class HomeScreen extends Component {
 	}
 
 	_renderData() {
-		var current_tab == this.state.current_tab;
+		var current_tab = this.state.current_tab;
 		var renderContent = [];
 		if (current_tab ==  'mb') {
 			renderContent.push(
-				<View style={{height: 50, flexDirection: 'row', borderWidth: 0.5, borderColor: 'black', flex: 1}}>
-					<Text style={{color: 'black', alignSelf: 'center', marginLeft: 5}}>Kết quả ngày : {this.state.tableDataMB[8]}</Text>
+				<View style={{height: 50, flexDirection: 'row', borderWidth: 0.5, borderColor: 'black', backgroundColor: 'white'}}>
+					<Text style={{color: 'black', alignSelf: 'center', marginLeft: 5}}>Kết quả ngày: {this.state.tableDataMB[8]}</Text>
 				</View>
 			);
 			renderContent.push(
 				<View style={{height: 50, flexDirection: 'row', borderWidth: 0.5, borderColor: 'black', flex: 1}}>
-					<View style={{flex: 0.3, justifyContent: 'center'}}>
+					<View style={{flex: 0.3, justifyContent: 'center',backgroundColor: 'white'}}>
 						<Text style={{color: 'red', fontWeight: 'bold', alignSelf: 'center'}}>Giải</Text>
 					</View>
-					<View style={{flex: 0.7 , borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center'}}>
-						<Text style={{color: 'red', fontWeight: 'bold', alignSelf: 'center'}}>Số lần</Text>
+					<View style={{flex: 0.7 , borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center',backgroundColor: 'white'}}>
+						<Text style={{color: 'red', fontWeight: 'bold', alignSelf: 'center'}}>Miền Bắc</Text>
 					</View>
 				</View>
 			);
@@ -302,10 +294,10 @@ class HomeScreen extends Component {
 						if (index != 8) {
 							renderContent.push(
 								<View style={{height: 40, flexDirection: 'row', borderWidth: 0.5, borderColor: 'black', flex: 1}}>
-									<View style={{flex: 0.3, justifyContent: 'center'}}>
+									<View style={{flex: 0.3, justifyContent: 'center',backgroundColor: 'white'}}>
 										<Text style={{ alignSelf: 'center'}}>{this.generateGiai(index)}</Text>
 									</View>
-									<View style={{flex: 0.7, borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center'}}>
+									<View style={{flex: 0.7, borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center',backgroundColor: 'white'}}>
 										<Text style={{ alignSelf: 'center', marginLeft: 3, marginRight: 3, color: (index == 0)?'red': 'black'}}>{items}</Text>
 									</View>
 								</View>
@@ -315,30 +307,92 @@ class HomeScreen extends Component {
 			}
 		} else if (current_tab == 'mt') {
 			renderContent.push(
-				<View style={{height: 50, flexDirection: 'row', borderWidth: 0.5, borderColor: 'black', flex: 1}}>
-					<Text style={{color: 'black', alignSelf: 'center', marginLeft: 5}}>Kết quả ngày : {this.state.tableDataMT[8]}</Text>
+				<View style={{height: 50, flexDirection: 'row', borderWidth: 0.5, borderColor: 'black', flex: 1,backgroundColor: 'white'}}>
+					<Text style={{color: 'black', alignSelf: 'center', marginLeft: 5}}>Kết quả ngày: {this.state.tableDataMT[8]}</Text>
 				</View>
 			);
 			renderContent.push(
 				<View style={{height: 50, flexDirection: 'row', borderWidth: 0.5, borderColor: 'black', flex: 1}}>
-					<View style={{flex: 0.3, justifyContent: 'center'}}>
+					<View style={{flex: 0.3, justifyContent: 'center',backgroundColor: 'white'}}>
 						<Text style={{color: 'red', fontWeight: 'bold', alignSelf: 'center'}}>Giải</Text>
 					</View>
-					<View style={{flex: 0.7 , borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center'}}>
+					<View style={{flex: 0.7 , borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center',backgroundColor: 'white'}}>
+						<Text style={{color: 'red', fontWeight: 'bold', alignSelf: 'center'}}>Số lần</Text>
+					</View>
+					<View style={{flex: 0.7 , borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center',backgroundColor: 'white'}}>
 						<Text style={{color: 'red', fontWeight: 'bold', alignSelf: 'center'}}>Số lần</Text>
 					</View>
 				</View>
 			);
 			if (this.state.tableDataMT) {
 					this.state.tableDataMT.map((items, index) => {
+						var heightMax = 0;
+						if (index == 4) {
+							heightMax = 100;
+						} else {
+							heightMax = 40;
+						}
 						if (index != 8) {
 							renderContent.push(
-								<View style={{height: 40, flexDirection: 'row', borderWidth: 0.5, borderColor: 'black', flex: 1}}>
-									<View style={{flex: 0.3, justifyContent: 'center'}}>
+								<View style={{height:heightMax , flexDirection: 'row', borderWidth: 0.5, borderColor: 'black', flex: 1,backgroundColor: 'white'}}>
+									<View style={{flex: 0.3, justifyContent: 'center',backgroundColor: 'white'}}>
 										<Text style={{ alignSelf: 'center'}}>{this.generateGiai(index)}</Text>
 									</View>
-									<View style={{flex: 0.7, borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center'}}>
-										<Text style={{ alignSelf: 'center', marginLeft: 3, marginRight: 3, color: (index == 0)?'red': 'black'}}>{items}</Text>
+									<View style={{flex: 0.7, borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center',backgroundColor: 'white'}}>
+										<Text style={{ alignSelf: 'center', marginLeft: 3, marginRight: 3, color: (index == 0)?'red': 'black'}}>{items[0]}</Text>
+									</View>
+									<View style={{flex: 0.7, borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center',backgroundColor: 'white'}}>
+										<Text style={{ alignSelf: 'center', marginLeft: 3, marginRight: 3, color: (index == 0)?'red': 'black'}}>{items[1]}</Text>
+									</View>
+								</View>
+							);
+						}
+					});
+			}
+		} else if (current_tab == 'mn') {
+			renderContent.push(
+				<View style={{height: 50, flexDirection: 'row', borderWidth: 0.5, borderColor: 'black', flex: 1,backgroundColor: 'white'}}>
+					<Text style={{color: 'black', alignSelf: 'center', marginLeft: 5}}>Kết quả ngày: {this.state.tableDataMT[8]}</Text>
+				</View>
+			);
+			renderContent.push(
+				<View style={{height: 50, flexDirection: 'row', borderWidth: 0.5, borderColor: 'black', flex: 1,backgroundColor: 'white'}}>
+					<View style={{flex: 0.3, justifyContent: 'center', justifyContent: 'center', alignItems: 'center',backgroundColor: 'white'}}>
+						<Text style={{color: 'red', fontWeight: 'bold', alignSelf: 'center'}}>Giải</Text>
+					</View>
+					<View style={{flex: 0.7 , borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center',backgroundColor: 'white'}}>
+						<Text style={{color: 'red', fontWeight: 'bold', alignSelf: 'center'}}>Hậu Giang</Text>
+					</View>
+					<View style={{flex: 0.7 , borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center',backgroundColor: 'white'}}>
+						<Text style={{color: 'red', fontWeight: 'bold', alignSelf: 'center'}}>Hồ Chí Minh</Text>
+					</View>
+					<View style={{flex: 0.7 , borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center',backgroundColor: 'white'}}>
+						<Text style={{color: 'red', fontWeight: 'bold', alignSelf: 'center'}}>Long An</Text>
+					</View>
+				</View>
+			);
+			if (this.state.tableDataMN) {
+					this.state.tableDataMN.map((items, index) => {
+						var heightMax = 0;
+						if (index == 4) {
+							heightMax = 100;
+						} else {
+							heightMax = 40;
+						}
+						if (index != 8) {
+							renderContent.push(
+								<View style={{height:heightMax , flexDirection: 'row', borderWidth: 0.5, borderColor: 'black', flex: 1}}>
+									<View style={{flex: 0.3, justifyContent: 'center', alignItems: 'center',backgroundColor: 'white'}}>
+										<Text style={{ alignSelf: 'center', marginLeft: 5}}>{this.generateGiai(index)}</Text>
+									</View>
+									<View style={{flex: 0.7, borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center',backgroundColor: 'white'}}>
+										<Text style={{ alignSelf: 'center', marginLeft: 3, marginRight: 3, color: (index == 0)?'red': 'black'}}>{items[0]}</Text>
+									</View>
+									<View style={{flex: 0.7, borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center',backgroundColor: 'white'}}>
+										<Text style={{ alignSelf: 'center', marginLeft: 3, marginRight: 3, color: (index == 0)?'red': 'black'}}>{items[1]}</Text>
+									</View>
+									<View style={{flex: 0.7, borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center',backgroundColor: 'white'}}>
+										<Text style={{ alignSelf: 'center', marginLeft: 3, marginRight: 3, color: (index == 0)?'red': 'black'}}>{items[2]}</Text>
 									</View>
 								</View>
 							);

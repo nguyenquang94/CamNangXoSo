@@ -29,7 +29,7 @@ class ShowWebLink extends Component {
 		return (
 			<StyleProvider style={getTheme(material)}>
 			    <Container>
-			        <Header>
+					<Header style={{backgroundColor: '#FD9727'}}>
 			            <Left style={{flex: 1}}>
 			                <Button transparent onPress={() => dispatch(goBack())}>
 								<Icon name='md-arrow-back' />

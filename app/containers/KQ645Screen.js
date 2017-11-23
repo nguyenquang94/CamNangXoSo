@@ -17,6 +17,7 @@ import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-ta
 const tableHeader = ['Đầu số', 'Số lần', 'Tỉ lệ (%)'];
 const tableTitle = ['0', '1', '2', '3', '4', '5', '6', '7'];
 var win = Dimensions.get('window');
+import { openSideMenu } from '../actions/sidemenu';
 
 class KQ645Screen extends Component {
 	constructor(props) {
@@ -91,8 +92,8 @@ class KQ645Screen extends Component {
 			    <Container>
 			        <Header hasTabs style={{backgroundColor: '#FD9727'}}>
 			            <Left style={{flex: 1}}>
-			                <Button transparent onPress={() => dispatch(goBack())}>
-								<Icon name='md-arrow-back' />
+							<Button transparent onPress={() => dispatch(openSideMenu())}>
+								<Icon name='menu' />
 							</Button>
 			            </Left>
 			            <Body style={{flex: 3, alignItems: 'center', alignSelf: 'center'}}>

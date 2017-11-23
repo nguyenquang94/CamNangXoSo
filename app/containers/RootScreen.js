@@ -12,6 +12,10 @@ import HomeScreen from './HomeScreen';
 import NewsScreen from './NewsScreen';
 import DuDoanScreen from './DuDoanScreen';
 import FlashScreen from './FlashScreen';
+import ThongKeScreen from '../containers/ThongKeScreen';
+import ThongKeDetailScreen from '../containers/ThongKeDetailScreen';
+import KQ645Screen from '../containers/KQ645Screen';
+import KQMax4DScreen from '../containers/KQMax4DScreen';
 import TinhThanhScreen from './TinhThanhScreen';
 
 import { Define } from '../Define';
@@ -31,6 +35,12 @@ class RootScreen extends Component {
 					return <DuDoanScreen />;
 				case 'tinhthanh':
 					return <TinhThanhScreen />;
+				case '645':
+					return <KQ645Screen />;
+				case 'max4d':
+					return <KQMax4DScreen />;
+				case 'thongke':
+					return <ThongKeScreen />;
 				default:
 					return <HomeScreen />;
 			}

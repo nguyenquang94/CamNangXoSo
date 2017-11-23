@@ -51,13 +51,13 @@ class TinhThanhScreen extends Component {
 		return (
 			<StyleProvider style={getTheme(material)}>
 			    <Container>
-			        <Header>
+					<Header style={{backgroundColor: '#FD9727'}}>
 			            <Left style={{flex: 1}}>
 			                <Button transparent onPress={() => dispatch(openSideMenu())}>
 			                    <Icon name='menu' />
 			                </Button>
 			            </Left>
-			            <Body style={{flex: 3}}>
+			            <Body style={{flex: 3, alignItems: 'center', alignSelf: 'center'}}>
 			            	<Title>Xổ Số Các Tỉnh Thành</Title>
 			            </Body>
 			            <Right style={{flex: 1}}></Right>
@@ -70,7 +70,7 @@ class TinhThanhScreen extends Component {
 	                    />
 			        </Content>
 			        <AdMobBanner
-                        bannerSize="banner"
+                        bannerSize="smartBannerPortrait"
                         adUnitID="ca-app-pub-7350182379499361/8563659309"
                         testDeviceID="EMULATOR"
                         didFailToReceiveAdWithError={this.bannerError}/>
