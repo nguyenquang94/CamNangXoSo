@@ -317,10 +317,10 @@ class HomeScreen extends Component {
 						<Text style={{color: 'red', fontWeight: 'bold', alignSelf: 'center'}}>Giải</Text>
 					</View>
 					<View style={{flex: 0.7 , borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center',backgroundColor: 'white'}}>
-						<Text style={{color: 'red', fontWeight: 'bold', alignSelf: 'center'}}>Số lần</Text>
+						<Text style={{color: 'red', fontWeight: 'bold', alignSelf: 'center'}}>Phú Yên</Text>
 					</View>
 					<View style={{flex: 0.7 , borderLeftWidth: 1, boderLeftColor: 'black', justifyContent: 'center',backgroundColor: 'white'}}>
-						<Text style={{color: 'red', fontWeight: 'bold', alignSelf: 'center'}}>Số lần</Text>
+						<Text style={{color: 'red', fontWeight: 'bold', alignSelf: 'center'}}>Huế</Text>
 					</View>
 				</View>
 			);

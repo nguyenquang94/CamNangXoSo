@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -135,6 +136,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 3245CDED1BFEE35C00EABF68;
 			remoteInfo = RCTOneSignal;
+		};
+		2B3319271FC7B57100DF36BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 83CBBA2D1A601D0E00E9B192;
+			remoteInfo = React;
 		};
 		2B46028B1F9991D300CF25C5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -344,6 +352,7 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		20400BD5DA9147098F3B0053 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		236A27ECB4C6445887B7ADFD /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		2B33194B1FC7BFB800DF36BE /* LoDe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = LoDe.entitlements; path = LoDe/LoDe.entitlements; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* LoDe-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LoDe-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* LoDe-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LoDe-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39337E2156834228AE556354 /* Roboto_medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto_medium.ttf; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; };
@@ -518,6 +527,7 @@
 		13B07FAE1A68108700A75B9A /* LoDe */ = {
 			isa = PBXGroup;
 			children = (
+				2B33194B1FC7BFB800DF36BE /* LoDe.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -729,6 +739,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2B3319281FC7B57100DF36BE /* PBXTargetDependency */,
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
 			name = LoDeTests;
@@ -804,10 +815,23 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = N7MUN943WA;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = N7MUN943WA;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1323,6 +1347,11 @@
 			target = 13B07F861A680F5B00A75B9A /* LoDe */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
+		2B3319281FC7B57100DF36BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = React;
+			targetProxy = 2B3319271FC7B57100DF36BE /* PBXContainerItemProxy */;
+		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2D02E47A1E0B4A5D006451C7 /* LoDe-tvOS */;
@@ -1347,6 +1376,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = N7MUN943WA;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1356,6 +1386,7 @@
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-admob/ios",
 					"$(SRCROOT)/../node_modules/react-native-onesignal/ios/RCTOneSignal/**",
+					"$(SRCROOT)/../../react-native/React/**",
 				);
 				INFOPLIST_FILE = LoDeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1380,11 +1411,13 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = N7MUN943WA;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-admob/ios",
 					"$(SRCROOT)/../node_modules/react-native-onesignal/ios/RCTOneSignal/**",
+					"$(SRCROOT)/../../react-native/React/**",
 				);
 				INFOPLIST_FILE = LoDeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1409,6 +1442,9 @@
 			baseConfigurationReference = 990BF1C567AD2D0266C5A3E0 /* Pods-LoDe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LoDe/LoDe.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = N7MUN943WA;
@@ -1416,7 +1452,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-admob/ios",
-					"$(SRCROOT)/../node_modules/react-native-onesignal/ios/RCTOneSignal/**",
+					"$(SRCROOT)/../node_modules/react-native-onesignal/ios/**",
 				);
 				INFOPLIST_FILE = LoDe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1425,7 +1461,11 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.quangnv.lodexoso;
 				PRODUCT_NAME = LoDe;
+				PROVISIONING_PROFILE = "54085f65-3c8b-467b-b975-835b50a9a5e3";
+				PROVISIONING_PROFILE_SPECIFIER = LoDeSoXo;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1435,13 +1475,16 @@
 			baseConfigurationReference = AF670FACC89F3A0550A128A9 /* Pods-LoDe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LoDe/LoDe.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N7MUN943WA;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-admob/ios",
-					"$(SRCROOT)/../node_modules/react-native-onesignal/ios/RCTOneSignal/**",
+					"$(SRCROOT)/../node_modules/react-native-onesignal/ios/**",
 				);
 				INFOPLIST_FILE = LoDe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1450,7 +1493,11 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.quangnv.lodexoso;
 				PRODUCT_NAME = LoDe;
+				PROVISIONING_PROFILE = "54085f65-3c8b-467b-b975-835b50a9a5e3";
+				PROVISIONING_PROFILE_SPECIFIER = LoDeSoXo;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
